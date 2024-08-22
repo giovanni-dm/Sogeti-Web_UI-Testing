@@ -5,3 +5,6 @@
 5. Include the downloaded WebDriver in the BuildPath of the newly created project
 6. Import the 3 Java files into the source folder of the project
 7. Run the tests
+
+
+Notes: The second test case fails in any case because some field is required but not specified in the task description. (eg."company")
