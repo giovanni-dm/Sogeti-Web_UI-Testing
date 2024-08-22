@@ -7,4 +7,4 @@
 7. Run the tests
 
 
-Notes: The second test case fails in any case because some field is required but not specified in the task description. (eg."company")
+Notes: The second test case fails in any case because some field is required but not specified in the task description. (eg."company"). The issue is at specification level.
