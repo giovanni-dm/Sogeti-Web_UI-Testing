@@ -44,20 +44,28 @@ public class Test1 {
 	        // Click on 'Automation' link
 	        WebElement automationLink = wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//a[text()='Automation']")));
 	        action.moveToElement(automationLink).click().perform();
+	        
+	        
 
 	        // Verify 'Automation' page is displayed
 	        WebElement bodyText = wait.until(ExpectedConditions.visibilityOfElementLocated(By.tagName("body")));
 	        Assert.assertTrue(bodyText.getText().contains("Automation"), "'Automation' text is not visible on the page");
-
+	        
+	        
 	        // Hover again over 'Services' link and verify selections
-	        action.moveToElement(servicesLink).perform();
+	        WebElement servicesLink2 = wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//*[@id=\"main-menu\"]/ul/li[3]/div[1]")));
+	        action.moveToElement(servicesLink2).perform();
+	        
+	       
 	        
 	        // Check if "Automation" is selected
 	        
-	        WebElement is_selected = driver.findElement(By.className("selected current expanded"));
+	        WebElement is_selected = driver.findElement(By.linkText("Automation"));
 	        boolean isDisplayed = is_selected.isDisplayed();
-	            
+	           
 	        Assert.assertTrue(isDisplayed, "The element Automation is not displayed.");
+	        
+	        
 	    
 	    
 	    }
